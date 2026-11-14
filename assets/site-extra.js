@@ -14,7 +14,7 @@
     '@media(max-width:420px){footer.fx .fx-in{grid-template-columns:1fr 1fr;gap:28px 20px}}';
   function list(items) { return '<ul>' + items.map(function (i) { return '<li><a href="' + i[1] + '">' + i[0] + '</a></li>'; }).join('') + '</ul>'; }
   function run() {
-    var f = document.querySelector('footer');
+    var f = document.querySelector('body > footer');
     if (!f || f.classList.contains('fx')) return !!f;
     var x = f.querySelector('a[href^="https://x.com"]'); var xh = x ? x.getAttribute('href') : 'https://x.com';
     var sv = x && x.querySelector('svg'); var icon = sv ? sv.outerHTML : '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7 8 10.3h-6.2l-4.9-6.3L5.4 21H2.3l7.3-8.3L2 3h6.4l4.4 5.8L17.8 3Zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5Z"/></svg>';
