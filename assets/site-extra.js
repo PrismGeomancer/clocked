@@ -25,7 +25,7 @@
       '<div><h4>Product</h4>' + list([['Launch a coin', '/launch'], ['Coins', '/coins'], ['Leaderboard', '/leaderboard']]) + '</div>' +
       '<div><h4>Learn</h4>' + list([['The crew', '/crew'], ['Milestones', '/milestones'], ['Flywheel', '/flywheel'], ['Docs', '/docs']]) + '</div>' +
       '<div><h4>Follow</h4><ul><li><a class="fx-x" href="' + xh + '" target="_blank" rel="noreferrer">' + icon + 'X</a></li></ul></div></div>' +
-      '<div class="fx-bot"><span>© 2026 clocked.fun</span><span>Memecoins are risky. Nothing here is financial advice.</span></div>';
+      '<div class="fx-bot"><span>© 2026 clocked.fun</span></div>';
     return true;
   }
   var n = 0, t = setInterval(function () { if (run() || ++n > 60) clearInterval(t); }, 250);
