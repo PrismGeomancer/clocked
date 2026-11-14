@@ -10,7 +10,7 @@ DRY = '--dry' in sys.argv
 
 # Placeholders (swap later with one find-and-replace, see CHANGES.md)
 DOMAIN = 'clocked.fun'
-TICKER = '$CLK'
+TICKER = '$CLOCKED'
 
 PAIRS = [
 # ---- domain (placeholder) ----

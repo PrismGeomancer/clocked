@@ -13,8 +13,8 @@
     'footer.fx li a{color:var(--ink);font-size:15px;opacity:.8;transition:opacity .15s,color .15s}footer.fx li a:hover{opacity:1;color:var(--hi)}' +
     'footer.fx .fx-x{display:inline-flex;align-items:center;gap:10px;font-family:GeistMono,monospace;letter-spacing:.12em;font-size:13px}' +
     'footer.fx .fx-bot{max-width:1180px;margin:0 auto;padding:12px 24px 36px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;color:var(--mute);font-size:13px}' +
-    'footer.fx .fx-bot .st{display:inline-flex;align-items:center;gap:8px;font:500 11px GeistMono,monospace;letter-spacing:.14em}' +
-    'footer.fx .fx-bot .st i{width:7px;height:7px;border-radius:50%;background:var(--up);box-shadow:0 0 10px var(--up)}' +
+    'footer.fx .fx-bot .fxst{display:inline-flex;align-items:center;gap:8px;font:500 11px GeistMono,monospace;letter-spacing:.14em}' +
+    'footer.fx .fx-bot .fxst i{width:7px;height:7px;border-radius:50%;background:var(--up);box-shadow:0 0 10px var(--up)}' +
     '@media(max-width:820px){footer.fx .fx-in{grid-template-columns:1fr 1fr;padding-top:52px;gap:36px 24px}footer.fx .fx-brand{grid-column:1/-1}}';
   function list(items) { return '<ul>' + items.map(function (i) { return '<li><a href="' + i[1] + '">' + i[0] + '</a></li>'; }).join('') + '</ul>'; }
   function run() {
@@ -29,7 +29,7 @@
       '<div><h4>Product</h4>' + list([['Launch a coin', '/launch'], ['Coins', '/coins'], ['Leaderboard', '/leaderboard']]) + '</div>' +
       '<div><h4>Learn</h4>' + list([['The crew', '/crew'], ['Milestones', '/milestones'], ['Flywheel', '/flywheel'], ['Docs', '/docs']]) + '</div>' +
       '<div><h4>Follow</h4><ul><li><a class="fx-x" href="' + xh + '" target="_blank" rel="noreferrer">' + icon + 'TWITTER</a></li></ul></div></div>' +
-      '<div class="fx-bot"><span>© 2026 CLOCKED</span><span class="st"><i></i>ON THE CLOCK · 24/7</span></div>';
+      '<div class="fx-bot"><span>© 2026 CLOCKED</span><span class="fxst"><i></i>ON THE CLOCK · 24/7</span></div>';
     return true;
   }
   var n = 0, t = setInterval(function () { if (run() || ++n > 60) clearInterval(t); }, 250);

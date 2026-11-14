@@ -14,7 +14,7 @@
   function sync() {
     $("p-name").textContent = name.value || "Coin name";
     var t = tick.value.toUpperCase().replace(/[^A-Z0-9]/g, "");
-    $("p-tick").textContent = "$" + (t || "TICKER") + " · paired with $CLK";
+    $("p-tick").textContent = "$" + (t || "TICKER") + " · paired with $CLOCKED";
     $("p-page").textContent = "clocked.fun/" + (t.toLowerCase() || "ticker");
     [["name", name], ["tick", tick], ["desc", desc]].forEach(function (p) {
       var c = document.querySelector('[data-count="' + p[0] + '"]');

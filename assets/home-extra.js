@@ -22,7 +22,7 @@
     '<p>One signature in your wallet. After that the crew runs on its own, every coin, every night.</p></div>' +
     '<div class="hx-steps">' +
     step('01', 'Launch', 'Pick a name, ticker and image. Sign once; the coin goes live on pump.fun.', '1 SIGNATURE') +
-    step('02', 'Pair', 'Every coin trades against $CLK, so each buy feeds the same treasury.', 'PAIRED WITH $CLK') +
+    step('02', 'Pair', 'Every coin trades against $CLOCKED, so each buy feeds the same treasury.', 'PAIRED WITH $CLOCKED') +
     step('03', 'Clock in', 'At $10K the six agents start: memes, posts, a site and a daily video.', 'AT $10K', 1) +
     step('04', 'Ship', 'Every fifteen minutes fees are collected. Each milestone adds hours to the shift.', 'EVERY 15 MIN') +
     '</div></section>';

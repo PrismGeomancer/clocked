@@ -4,8 +4,8 @@ Re-run: `python3 tools/rebrand.py` on a fresh copy (asserts exact counts; `--dry
 
 ## Placeholders (swap later with one find-and-replace)
 - Domain `clocked.fun` (39 occurrences: canonical/og/icon URLs, nav and footer links, example tile URLs like clocked.fun/mochi, the launch preview "clocked.fun/ticker", share links).
-- Ticker `$CLK` (42 occurrences: "paired with $CLK", coin pair labels, flywheel diagram, docs, fee labels).
-  To change: replace `clocked.fun` and `$CLK` across *.html, *.js, README.md. The tickers contain no "$"-leading payload strings, so no `$$` escaping was needed.
+- Ticker `$CLOCKED` (final; 42+ occurrences: "paired with $CLOCKED", coin pair labels, flywheel diagram, docs, fee labels).
+  To change: replace `clocked.fun` and `$CLOCKED` across *.html, *.js, README.md. The tickers contain no "$"-leading payload strings, so no `$$` escaping was needed.
 
 ## Left unchanged
 - API paths `/api/...`, wallet/mint/program addresses (none contained the brand).
@@ -23,7 +23,7 @@ Re-run: `python3 tools/rebrand.py` on a fresh copy (asserts exact counts; `--dry
 ## Added after the first pass
 - `tools/serve.py`: local server with clean URLs (`/launch` -> launch.html). Run `python3 tools/serve.py 8000`. Plain `python3 -m http.server` cannot resolve the nav routes.
 - Nav links on the home page are now root-relative (`/launch`, ...) instead of pointing at the placeholder domain.
-- Home page structure: `assets/home-extra.js` (loaded by index.html) adds a "How it works" section before Examples and a closing "Put your coin on the clock" CTA after The crew. It runs after hydration, so React markup is untouched. It contains the `$CLK` placeholder once.
+- Home page structure: `assets/home-extra.js` (loaded by index.html) adds a "How it works" section before Examples and a closing "Put your coin on the clock" CTA after The crew. It runs after hydration, so React markup is untouched. It contains the `$CLOCKED` placeholder once.
 - Open the home page at `/`, not `/index.html` (the router reads `/index.html` as a coin named INDEX.HTML, same as the original).
 - `assets/site-extra.js` (all pages except 404): replaces the old footer with a structured one (brand, Product / Learn / Follow columns, short risk line). The X link reuses each page's existing handle. "How it works" on the home page was redesigned as a timeline.
 - Leaderboard demo data (leaderboard.html, static): 12 real Solana memecoins (TRUMP, BONK, WIF, USELESS, FARTCOIN, BOME, PNUT, POPCAT, MOODENG, MEW, GIGA, GOAT) with market cap and 24h change from DexScreener on 2026-11-14 (queried by mint address). Crew hours are invented; fees are 1% of 24h volume. Added 10 recent coins (AMC, GLITCH, GTA$, CJ, CHRISTMAX, CHILL, WISHMAS, BLACKOUT, DYC, GTA6; pair age <= 30 days, picked by market cap, junk/impersonation tokens skipped) with crew hours = hours since the pair launched. Table is labelled "These run on clocked"; no disclaimer notes. Not for public release; swap for live data or restore the empty state before publishing.
