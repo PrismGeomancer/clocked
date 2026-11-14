@@ -2,15 +2,9 @@
    Runs after hydration so React markup is untouched. Uses site CSS variables (day/night aware). */
 (function () {
   var css = '' +
-    '.hx-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative;padding-top:34px}' +
-    '.hx-steps:before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:linear-gradient(90deg,var(--hi) 0 25%,var(--line) 25%)}' +
-    '.hx-steps:after{content:"";position:absolute;top:8px;left:0;width:48px;height:4px;border-radius:4px;background:var(--hi);box-shadow:0 0 14px var(--hi);animation:hxrun 6s linear infinite}' +
-    '@keyframes hxrun{from{left:0}to{left:calc(100% - 48px)}}' +
-    '@media(prefers-reduced-motion:reduce){.hx-steps:after{animation:none;display:none}}' +
-    '.hx-step{padding:24px 22px 24px;position:relative;transition:transform .2s,border-color .2s}' +
-    '.hx-step:hover{transform:translateY(-4px);border-color:var(--hi)}' +
-    '.hx-step:before{content:"";position:absolute;top:-30px;left:22px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--hi)}' +
-    '.hx-step.on:before{background:var(--hi);box-shadow:0 0 0 5px color-mix(in srgb,var(--hi) 22%,transparent)}' +
+    '.hx-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}' +
+    '.hx-step{padding:24px 22px 24px;transition:border-color .2s}' +
+    '.hx-step:hover{border-color:var(--hi)}' +
     '.hx-step .n{font:500 12px GeistMono,monospace;letter-spacing:.16em;color:var(--hi)}' +
     '.hx-step b{display:block;font-size:24px;font-weight:600;margin:12px 0 8px;letter-spacing:-.02em}' +
     '.hx-step p{margin:0 0 18px;color:var(--mute);font-size:15px;line-height:1.5}' +
@@ -23,7 +17,6 @@
     '.hx-cta .btn.ghost{border:1px solid var(--line);color:var(--ink)}' +
     '.hx-links{display:flex;gap:8px 22px;justify-content:center;flex-wrap:wrap;margin-top:34px;font:500 12px GeistMono,monospace;letter-spacing:.14em;text-transform:uppercase}' +
     '.hx-links a{color:var(--mute)}.hx-links a:hover{color:var(--ink)}' +
-    '@media(max-width:900px){.hx-steps{grid-template-columns:repeat(2,1fr);padding-top:0}.hx-steps:before,.hx-steps:after,.hx-step:before{display:none}}' +
     '@media(max-width:560px){.hx-steps{grid-template-columns:1fr}.hx-sec{margin-top:72px}.hx-cta{padding:40px 22px;margin-top:80px}}';
   var how = '<section class="hx-sec" id="how"><div class="sh"><div><div class="label">How it works</div><h2>Launch in a minute.<br>On the clock by $10K.</h2></div>' +
     '<p>One signature in your wallet. After that the crew runs on its own, every coin, every night.</p></div>' +
