@@ -25,3 +25,4 @@ Re-run: `python3 tools/rebrand.py` on a fresh copy (asserts exact counts; `--dry
 - Nav links on the home page are now root-relative (`/launch`, ...) instead of pointing at the placeholder domain.
 - Home page structure: `assets/home-extra.js` (loaded by index.html) adds a "How it works" section before Examples and a closing "Put your coin on the clock" CTA after The crew. It runs after hydration, so React markup is untouched. It contains the `$CLK` placeholder once.
 - Open the home page at `/`, not `/index.html` (the router reads `/index.html` as a coin named INDEX.HTML, same as the original).
+- `assets/site-extra.js` (all pages except 404): replaces the old footer with a structured one (brand, Product / Learn / Follow columns, short risk line). The X link reuses each page's existing handle. "How it works" on the home page was redesigned as a timeline.
