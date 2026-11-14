@@ -63,7 +63,7 @@ PAIRS = [
 ('All on overtime.', 'All on the clock.', 1),
 ('Every coin<br>on overtime<span', 'Every coin<br>on the clock<span', 1),
 ('"Every coin",(0,r.jsx)("br",{}),"on overtime"', '"Every coin",(0,r.jsx)("br",{}),"on the clock"', 1),
-('Every coin on overtime gets', 'Every coin on the clock gets', 2),
+('Every coin on overtime gets', 'Every coin on clocked gets', 2),
 ('same six on overtime', 'same six on the clock', 2),
 ('a daily video, on overtime.', 'a daily video, on the clock.', 2),
 ('Put your coin on overtime', 'Put your coin on the clock', 2),
@@ -113,6 +113,16 @@ PAIRS = [
 ('\\"twitter:title\\",\\"content\\":\\"overtime\\"', '\\"twitter:title\\",\\"content\\":\\"clocked\\"', 1),
 ('on your overtime account', 'on your clocked account', 1),
 ('/* Overtime sub-pages', '/* Clocked sub-pages', 1),
+# ---- internal nav links: make root-relative so they work locally and on any host ----
+('href="https://clocked.fun/launch"', 'href="/launch"', 2),
+('href="https://clocked.fun/coins"', 'href="/coins"', 1),
+('href="https://clocked.fun/crew"', 'href="/crew"', 1),
+('href="https://clocked.fun/milestones"', 'href="/milestones"', 1),
+('href="https://clocked.fun/flywheel"', 'href="/flywheel"', 1),
+('href="https://clocked.fun/leaderboard"', 'href="/leaderboard"', 1),
+('href="https://clocked.fun/docs"', 'href="/docs"', 2),
+('href="https://clocked.fun/#board"', 'href="/#board"', 1),
+('href="https://clocked.fun/"', 'href="/"', 2),
 ]
 
 FILES = [f for f in glob.glob(os.path.join(ROOT, '**', '*'), recursive=True)

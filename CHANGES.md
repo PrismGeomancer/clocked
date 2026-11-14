@@ -19,3 +19,9 @@ Re-run: `python3 tools/rebrand.py` on a fresh copy (asserts exact counts; `--dry
 - https://x.com/overtimeagent_ (NEXT_PUBLIC_X_URL default in bundle 1qchkddf4806h.js; nav/footer in index, crew, launch, coins)
 - https://x.com/useOvertime (nav/footer in crew, flywheel, coins, leaderboard, milestones, docs, index)
 - Any t.me / github / dexscreener / pump.fun / docs links remain as in the original; add real handles for CLOCKED.
+
+## Added after the first pass
+- `tools/serve.py`: local server with clean URLs (`/launch` -> launch.html). Run `python3 tools/serve.py 8000`. Plain `python3 -m http.server` cannot resolve the nav routes.
+- Nav links on the home page are now root-relative (`/launch`, ...) instead of pointing at the placeholder domain.
+- Home page structure: `assets/home-extra.js` (loaded by index.html) adds a "How it works" section before Examples and a closing "Put your coin on the clock" CTA after The crew. It runs after hydration, so React markup is untouched. It contains the `$CLK` placeholder once.
+- Open the home page at `/`, not `/index.html` (the router reads `/index.html` as a coin named INDEX.HTML, same as the original).
