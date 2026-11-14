@@ -16,8 +16,7 @@ Re-run: `python3 tools/rebrand.py` on a fresh copy (asserts exact counts; `--dry
 - Existing hydration error #418 appears on every page in the baseline too (46 occurrences); it is unchanged by the rebrand.
 
 ## Needs my input (external links, not changed)
-- https://x.com/overtimeagent_ (NEXT_PUBLIC_X_URL default in bundle 1qchkddf4806h.js; nav/footer in index, crew, launch, coins)
-- https://x.com/useOvertime (nav/footer in crew, flywheel, coins, leaderboard, milestones, docs, index)
+- X link is now https://x.com/Clocked_agent everywhere (nav, footer, bundle default).
 - Any t.me / github / dexscreener / pump.fun / docs links remain as in the original; add real handles for CLOCKED.
 
 ## Added after the first pass
